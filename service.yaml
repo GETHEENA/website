@@ -3,12 +3,10 @@ kind: Service
 metadata:
   name: example-service
 spec:
-  selector:
-    app: example
-  ports:
-    - protocol: TCP
-      port: 80
-      targetPort: 80
-      nodeport: 30008
   type: NodePort
-  
+  ports:
+  - port: 80
+    targetPort: 8080
+    nodePort: 30008  # Make sure this field is properly indented and placed within the 'ports' section.
+selector:
+  app: example
