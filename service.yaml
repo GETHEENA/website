@@ -5,8 +5,8 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - port: 80
-    targetPort: 8080
-    nodePort: 30008  # Make sure this field is properly indented and placed within the 'ports' section.
-selector:
-  app: example
+    - port: 80
+      targetPort: 8080
+      nodePort: 30008  # Updated 'nodePort' value
+  selector:
+    app: example
